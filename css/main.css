@@ -119,7 +119,8 @@ button {
     border: none;
     border-bottom: rgb(10, 117, 129) 5px solid;
     text-shadow: 0 0 0.3rem var(--button-shadow-color);
-    -webkit-tap-highlight-color: transparent;   /* スマホタップ時のデフォルトハイライトを消す */
+    -webkit-tap-highlight-color: transparent;
+    /* スマホタップ時のデフォルトハイライトを消す */
 }
 
 button:hover {
@@ -160,30 +161,36 @@ table {
     border-collapse: collapse;
 }
 
-td {
-    padding: 0.6rem;
-}
-
 tr:nth-child(even) {
     background: var(--table-row-color);
 }
 
+td {
+    padding: 0.6rem;
+}
+
 td:nth-child(1) {
     text-align: right;
-    width: max-content;
+    width: 5rem;
 }
 
 td:nth-child(2) {
     text-align: left;
-    width: 45%;
+    width: 6.5rem;
 }
 
 td:nth-child(3) {
-    text-align: right;
-    width: 1%;
+    text-align: left;
+    width: 4.5rem;
 }
 
-#today-eto, #next-eto {
+td:nth-child(4) {
+    text-align: right;
+    width: 1rem;
+}
+
+#today-eto,
+#next-eto {
     margin: 0rem 0rem 0rem 1rem;
 }
 

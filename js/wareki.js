@@ -4,7 +4,7 @@ const seireki = today_now.getFullYear();
 
 /* 干支定義 */
 const eto = ["&#x1f42d;", "&#x1f42e;", "&#x1f42f;", "&#x1f430;", "&#x1f432;", "&#x1f40d;", "&#x1f434;", "&#x1f40f;", "&#x1f435;", "&#x1f414;", "&#x1f436;", "&#x1f417;"];
-// 干支を計算する関数（西暦を渡すと絵文字を返す）
+// 干支算出関数（西暦を渡すと絵文字を返す。西暦-4を12で割った余りが干支のインデックス）
 function getEto(year) {
     const etoIndex = (year - 4) % 12;
     const safeEtoIndex = (etoIndex < 0) ? etoIndex + 12 : etoIndex;
@@ -32,14 +32,14 @@ for (let i = 1; i < 101; i++) {
         warekiDis = `昭和 ${shouwa === 64 ? '1（昭和64/平成元）' : shouwa} 年`; // 昭和64年はそのまま計算
     }
 
-    /* 干支算出処理 (西暦-4を12で割った余りが干支のインデックス) */
-    const etoIndex = (targetYear - 4) % 12;
-    // マイナスになる場合を考慮した安全な剰余計算
-    const safeEtoIndex = (etoIndex < 0) ? etoIndex + 12 : etoIndex;
-    const etoDis = eto[safeEtoIndex];
+    /* 干支代入 */
+    const etoDis = getEto(targetYear);
+
+    /* 年齢算出処理 */
+    const ageDis = (seireki - targetYear) + "歳";
 
     /* テーブル行を作成し連結 */
-    tableHtml += `<tr><td>${seirekiDis}</td><td>${warekiDis}</td><td>${etoDis}</td></tr>`;
+    tableHtml += `<tr><td>${seirekiDis}</td><td>${warekiDis}</td><td>(${ageDis})</td><td>${etoDis}</td></tr>`;
 }
 
 /* まとめてHTMLに反映 */
@@ -52,5 +52,6 @@ document.getElementById('next-date').textContent = `${nextYear} 年 令和 ${nex
 document.getElementById('next-eto').innerHTML = getEto(nextYear);
 
 /* 現在表示 */
-document.getElementById('today-date').textContent = `${seireki} 年 令和 ${nextReiwa - 1} 年 ${today_now.getMonth() + 1} 月 ${today_now.getDate()} 日`;
+const nowReiwa = seireki - 2018;
+document.getElementById('today-date').textContent = `${seireki} 年 令和 ${nowReiwa} 年 ${today_now.getMonth() + 1} 月 ${today_now.getDate()} 日`;
 document.getElementById('today-eto').innerHTML = getEto(seireki);
