@@ -160,7 +160,10 @@ table {
     border: none;
     border-collapse: collapse;
 }
-
+tr {
+    display: flex;
+    justify-content: space-around;
+}
 tr:nth-child(even) {
     background: var(--table-row-color);
 }
@@ -171,22 +174,22 @@ td {
 
 td:nth-child(1) {
     text-align: right;
-    width: 5rem;
+    width: 4.5rem;
 }
 
 td:nth-child(2) {
     text-align: left;
-    width: 6.5rem;
+    width: 5.5rem;
 }
 
 td:nth-child(3) {
     text-align: left;
-    width: 4.5rem;
+    width: 4.1rem;
 }
 
 td:nth-child(4) {
-    text-align: right;
-    width: 1rem;
+    text-align: center;
+    width: 1.8rem;
 }
 
 #today-eto,

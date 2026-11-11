@@ -21,15 +21,21 @@ for (let i = 1; i < 101; i++) {
     let warekiDis = "";
 
     /* 和暦算出処理 */
-    if (targetYear >= 2019) {
+    if (targetYear === 2019) {
+        // 2019年は平成31年でもあり、令和元年でもある年
+        warekiDis = `令和元年<br>平成31年`;
+    } else if (targetYear >= 2019) {
         const reiwa = targetYear - 2018;
-        warekiDis = `令和 ${reiwa === 1 ? '元' : reiwa} 年`;
+        warekiDis = `令和 ${reiwa} 年`;
+    } else if (targetYear === 1989) {
+        // 1989年は昭和64年でもあり、平成元年でもある年
+        warekiDis = `平成元年<br>昭和64年`;
     } else if (targetYear >= 1989) {
         const heisei = targetYear - 1988;
-        warekiDis = `平成 ${heisei === 1 ? '元' : heisei} 年`;
+        warekiDis = `平成 ${heisei} 年`;
     } else {
         const shouwa = targetYear - 1925;
-        warekiDis = `昭和 ${shouwa === 64 ? '1（昭和64/平成元）' : shouwa} 年`; // 昭和64年はそのまま計算
+        warekiDis = `昭和 ${shouwa} 年`;
     }
 
     /* 干支代入 */
