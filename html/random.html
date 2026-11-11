@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>ランダム抽選ツール</title>
+</head>
+
+<body>
+    <div class="main-contents">
+        <h1>ランダム抽選ツール</h1>
+        <div class="container-input">
+            <h3>選択肢入力</h3>
+            <div class="input-text">
+                <textarea class="input-choice" placeholder="選択肢を改行で入力してください。&#10;&#10;例）&#10;ハンバーガー&#10;寿司&#10;パスタ"></textarea>
+            </div>
+            <div class="button-style"><button type="button" id="button" title="抽選実行ボタン">抽選する</button></div>
+        </div>
+        <div class="container-result">
+            <h3>抽選結果</h3>
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+    <script src="../js/random.js"></script>
+</body>
+
+</html>

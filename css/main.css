@@ -1,0 +1,230 @@
+/*************************************
+基本設定
+*************************************/
+* {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin: 0rem 0rem 0rem 0.6rem;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 50,
+        'opsz' 24
+}
+
+/*色*/
+:root {
+    /*共通*/
+    --button-txt-color: rgb(255, 255, 255);
+    --button-shadow-color: rgb(12, 120, 134, 0.8);
+    --bd-color: rgb(186, 186, 190);
+    --base-color: rgba(87, 83, 160, 0.2);
+    --table-row-color: rgba(62, 59, 255, 0.1);
+    /*ライトモード*/
+    --light-bg-color: rgb(255, 255, 255);
+    --light-sub-bg-color: rgb(245, 243, 250);
+    --light-txt-color: rgb(34, 34, 34);
+    /*ダークモード*/
+    --dark-bg-color: rgb(25, 25, 34);
+    --dark-sub-bg-color: rgb(37, 37, 54);
+    --dark-txt-color: rgb(255, 255, 255);
+}
+
+/*サイズ*/
+body {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 1rem;
+}
+
+h1,
+h3 {
+    margin: 0rem 0rem 1.5rem 0rem;
+}
+
+.main-contents {
+    display: block;
+    width: 100%;
+}
+
+.container-input,
+.container-result {
+    margin: 1rem 0rem 2.5rem 0rem;
+}
+
+.container-result {
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.container-today {
+    border-radius: 1rem;
+    margin: 0rem 0rem 0.5rem 0rem;
+    padding: 0.5rem 0.5rem 0.8rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container-today h3 {
+    margin: 0rem 2rem 0rem 0.5rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.6rem;
+    background: var(--button-shadow-color);
+}
+
+.input-text {
+    width: 100%;
+    display: block;
+}
+
+textarea {
+    border-radius: 1rem;
+    min-width: 80%;
+    min-height: 16rem;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.button-style {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 1.5rem;
+    border-radius: 8rem;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 8rem;
+    padding: 1rem 3rem 1.2rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 2rem;
+    vertical-align: middle;
+    background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD 51%, #4CB8C4 100%);
+    text-align: center;
+    background-size: 200% auto;
+    color: var(--button-txt-color);
+    outline: none;
+    border: none;
+    border-bottom: rgb(10, 117, 129) 5px solid;
+    text-shadow: 0 0 0.3rem var(--button-shadow-color);
+}
+
+button:hover {
+    background-position: right center;
+    text-decoration: none;
+    border-bottom: none;
+    margin-top: 5px;
+}
+
+.result {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.result-today {
+    font-size: 1.4rem;
+}
+
+.result-table {
+    text-align: left;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 1rem;
+}
+
+tr:nth-child(even) {
+    background: var(--table-row-color);
+}
+
+td:nth-child(1) {
+    text-align: right;
+    width: max-content;
+}
+
+td:nth-child(2) {
+    text-align: left;
+    width: 45%;
+}
+
+td:nth-child(3) {
+    text-align: right;
+    width: 1%;
+}
+
+#next-eto {
+    margin: 0rem 0rem 0rem 1rem;
+}
+
+/*************************************
+ライトモード
+*************************************/
+@media (prefers-color-scheme: light) {
+    body {
+        background: var(--light-bg-color);
+        color: var(--light-txt-color);
+    }
+
+    .container-result,
+    .container-today {
+        background: var(--base-color);
+    }
+
+    textarea {
+        border: var(--bd-color) 3px solid;
+        background: var(--light-sub-bg-color);
+        color: var(--light-txt-color);
+    }
+
+    .result,
+    .result-table {
+        background: var(--light-bg-color);
+    }
+}
+
+/*************************************
+ダークモード
+*************************************/
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--dark-bg-color);
+        color: var(--dark-txt-color);
+    }
+
+    .container-result,
+    .container-today {
+        background: var(--base-color);
+    }
+
+    textarea {
+        border: var(--bd-color) 3px solid;
+        background: var(--dark-sub-bg-color);
+        color: var(--dark-txt-color);
+    }
+
+    .result,
+    .result-table {
+        background: var(--dark-bg-color);
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>和暦確認ツール</title>
+</head>
+
+<body>
+    <div class="main-contents">
+        <h1>和暦確認ツール</h1>
+        <div class="container-today">
+            <h3>現在</h3>
+            <div class="result-today"><span id="today-date"></span></div>
+        </div>
+        <div class="container-today">
+            <h3>来年</h3>
+            <div class="result-today"><span id="next-date"></span><span id="next-eto"></span></div>
+        </div>
+        <div class="container-result">
+            <h3>過去50年分の和暦対応表</h3>
+            <div class="result-table">
+                <table>
+                    <tbody id="wareki-table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../js/wareki.js"></script>
+</body>
+
+</html>
