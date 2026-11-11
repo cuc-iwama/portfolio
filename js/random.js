@@ -4,7 +4,7 @@ let $result = document.getElementById('result');
 $result.innerHTML = resultText;
 
 /* 抽選処理 */
-document.getElementById("button").addEventListener("click", function() {
+document.getElementById("button").addEventListener("click", function () {
     /* 入力値取得 */
     const getText = document.getElementsByClassName('input-choice');
     const getResultText = getText[0].value;
