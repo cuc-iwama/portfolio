@@ -151,6 +151,7 @@ button:active {
 .result-table {
     text-align: left;
     border-radius: 1rem;
+    overflow: hidden;
     font-size: 1.2rem;
     font-weight: 400;
 }
@@ -160,10 +161,12 @@ table {
     border: none;
     border-collapse: collapse;
 }
+
 tr {
     display: flex;
     justify-content: space-around;
 }
+
 tr:nth-child(even) {
     background: var(--table-row-color);
 }
