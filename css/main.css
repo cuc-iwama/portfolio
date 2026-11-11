@@ -71,12 +71,12 @@ h3 {
     padding: 0.5rem 0.5rem 0.8rem 0.5rem;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .container-today h3 {
-    margin: 0rem 2rem 0rem 0.5rem;
-    padding: 0.2rem 0.6rem;
+    margin: 0rem 0.6rem 0rem 0rem;
+    padding: 0.1rem 0.4rem 0.3rem 0.4rem;
     border-radius: 0.6rem;
     background: var(--h-bg-color);
 }
@@ -183,7 +183,7 @@ td:nth-child(3) {
     width: 1%;
 }
 
-#next-eto {
+#today-eto, #next-eto {
     margin: 0rem 0rem 0rem 1rem;
 }
 
