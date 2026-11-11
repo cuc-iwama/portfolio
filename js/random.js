@@ -21,6 +21,11 @@ document.getElementById("button").addEventListener("click", function () {
     const randomIndex = Math.floor(Math.random() * resultLines.length);
     resultText = resultLines[randomIndex];
 
-    /* 結果出力 */
-    $result.innerHTML = resultText;
+    /* 次の結果を出力する前に一旦「-」を挟む */
+    $result.innerHTML = "-";
+
+    setTimeout(() => {
+        /* 結果出力 */
+        $result.innerHTML = resultText;
+    }, 100);
 });

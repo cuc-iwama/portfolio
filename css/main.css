@@ -26,6 +26,7 @@
     --bd-color: rgb(186, 186, 190);
     --base-color: rgba(87, 83, 160, 0.2);
     --table-row-color: rgba(62, 59, 255, 0.1);
+    --h-bg-color: rgb(255, 255, 255, 0.3);
     /* ライトモード */
     --light-bg-color: rgb(255, 255, 255);
     --light-sub-bg-color: rgb(245, 243, 250);
@@ -77,7 +78,7 @@ h3 {
     margin: 0rem 2rem 0rem 0.5rem;
     padding: 0.2rem 0.6rem;
     border-radius: 0.6rem;
-    background: var(--button-shadow-color);
+    background: var(--h-bg-color);
 }
 
 .input-text {
@@ -121,6 +122,11 @@ button {
 }
 
 button:hover {
+    background-position: right center;
+    text-decoration: none;
+}
+
+button:active {
     background-position: right center;
     text-decoration: none;
     border-bottom: none;
