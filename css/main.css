@@ -119,6 +119,7 @@ button {
     border: none;
     border-bottom: rgb(10, 117, 129) 5px solid;
     text-shadow: 0 0 0.3rem var(--button-shadow-color);
+    -webkit-tap-highlight-color: transparent;   /* スマホタップ時のデフォルトハイライトを消す */
 }
 
 button:hover {
