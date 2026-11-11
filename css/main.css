@@ -38,7 +38,7 @@
 /*サイズ*/
 body {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
     padding: 1rem;
 }
@@ -104,7 +104,7 @@ button {
     cursor: pointer;
     border-radius: 8rem;
     padding: 1rem 3rem 1.2rem 3rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 2rem;
     vertical-align: middle;
